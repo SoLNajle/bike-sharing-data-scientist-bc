@@ -1,2 +1,5 @@
 # Data folder
 data
+
+#Mac files
+.DS_Store
