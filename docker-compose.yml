@@ -1,0 +1,21 @@
+services:
+  kaggle-downloader:
+    image: frolvlad/alpine-python3  # Example base image
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts 
+    command: >
+      /bin/sh scripts/download_bicing_dataset.sh
+    container_name: kaggle_downloader_bike
+      
+  jupyter:
+    build: 
+      context: .
+      dockerfile: ./docker/jupyter/Dockerfile
+    volumes:
+      - ./work:/home/jovyan/work
+      - ./data:/home/jovyan/data
+    ports:
+      - 1111:8888
+    container_name: jupyter_notebook_bike
+    command: "start-notebook.sh --NotebookApp.token="
