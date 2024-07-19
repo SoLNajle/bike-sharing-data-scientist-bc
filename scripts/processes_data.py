@@ -6,6 +6,7 @@ LOCATIONS_FILE_NAME = "../data/bicing/processed/2024_STATION_LOCATIONS.csv"
 PROCCESED_FOLDER = "../data/bicing/processed"
 RAW_FILE_NAME = "../data/bicing/raw/2024_INFO.csv"
 
+
 def read_stations_csv() -> pd.DataFrame:
     return pd.read_csv(RAW_FILE_NAME)
 
@@ -55,13 +56,16 @@ def map_post_code_to_district(df: pd.DataFrame) -> pd.DataFrame:
     }
     return df['post_code'].map(barcelona_postal_codes)
 
+
 def validate_data(df: pd.DataFrame) -> pd.DataFrame:
     if df['district'].isnull().sum() > 0:
-        #raise ValueError('There are null values in district column')
-        print('ERROR: There are null values in district column', df[df['district'].isna()])
+        # raise ValueError('There are null values in district column')
+        print('ERROR: There are null values in district column',
+              df[df['district'].isna()])
+
 
 def create_folder():
-    #create processed folder inside data if it does not exist
+    # create processed folder inside data if it does not exist
     if not os.path.exists(PROCCESED_FOLDER):
         os.makedirs(PROCCESED_FOLDER)
         print(f"Folder '{PROCCESED_FOLDER}' created.")
