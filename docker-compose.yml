@@ -1,15 +1,26 @@
 services:
   kaggle-downloader:
-    image: frolvlad/alpine-python3  # Example base image
+    image: frolvlad/alpine-python3 # Example base image
     volumes:
       - ./data:/data
-      - ./scripts:/scripts 
+      - ./scripts:/scripts
     command: >
       /bin/sh scripts/download_bicing_dataset.sh
     container_name: kaggle_downloader_bike
-      
+
+  data_preprocessing:
+    build:
+      context: .
+      dockerfile: ./docker/python/Dockerfile
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts
+    command: >
+      python3 scripts/processes_data.py
+    container_name: data_preprocessing_bike
+
   jupyter:
-    build: 
+    build:
       context: .
       dockerfile: ./docker/jupyter/Dockerfile
     volumes:
