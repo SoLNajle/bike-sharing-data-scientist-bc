@@ -6,3 +6,6 @@ data
 
 #ignore jupyter notebook checkpoints
 .ipynb_checkpoints
+
+#python cache
+__pycache__
