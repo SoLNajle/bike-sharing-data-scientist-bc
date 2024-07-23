@@ -5,6 +5,7 @@
 ### Instructions to run the project
 1. `make start`
 (🚨🚨🚨this will download 2GB from kaggle into the data folder if it doesn't exist ⏳⏳⏳⏳⏳😅😅)
+```* Wait for the Done message and the link!```
 2. check jupyter notebooks in --> [here](http://localhost:1111/lab?)
 * [Stations.ipynb](http://localhost:1111/lab/tree/work/exploratory/stations.ipynb) will have information about ... Stations
 * [WIP.ipynb](http://localhost:1111/lab/tree/work/exploratory/wip.ipynb) initial analysis, exploring, testing, and 42. Basically a gargabe collector 
