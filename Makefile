@@ -1,11 +1,16 @@
-#
+.PHONY: ps logs status start up stop kill
 
 ps: status
+
+logs:
+	@docker-compose logs -f
 
 status: 
 	@docker-compose ps
 
-start:
+start: up logs
+
+up:
 	@docker-compose up -d
 
 stop:
