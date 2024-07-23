@@ -18,6 +18,10 @@ services:
     command: >
       python3 scripts/processes_data.py
     container_name: data_preprocessing_bike
+    depends_on:
+      - serviceName: kaggle-downloader
+        condition: service_finished_successfully
+        
 
   jupyter:
     build:
