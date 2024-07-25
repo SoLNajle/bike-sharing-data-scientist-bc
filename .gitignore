@@ -1,5 +1,7 @@
 # Data folder
-data
+data/bicing
+data/aemet
+data/other
 
 #Mac files
 .DS_Store
