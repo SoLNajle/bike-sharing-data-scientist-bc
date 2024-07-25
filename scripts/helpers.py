@@ -15,7 +15,6 @@ def assign_datatypes_month_df(df: pd.DataFrame) -> pd.DataFrame:
         'month': int,
         'day': int,
         'hour': int,
-        'minute': int,
         'grouped_minute': int,
         'day_of_week': int,
         'is_weekend': int,

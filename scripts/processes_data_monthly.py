@@ -137,6 +137,7 @@ def create_month_files() -> None:
     print("All files processed.")
     print(f"Total rows processed: {total_rows_raw}.")
     print(f"Total rows pruned: {total_rows_prune} from all 2023 months.")
+    total_rows_raw = 1 if total_rows_raw == 0 else total_rows_raw
     print(F"Percentage of Data removed: {total_rows_prune/total_rows_raw*100:.2f}%.")
 
 

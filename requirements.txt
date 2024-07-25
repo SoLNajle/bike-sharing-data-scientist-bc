@@ -2,4 +2,6 @@ geopy
 pandas
 numpy
 plotly.express
-
+pyarrow
+imageio
+kaleido

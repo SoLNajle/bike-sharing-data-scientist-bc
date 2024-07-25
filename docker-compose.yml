@@ -32,3 +32,17 @@ services:
       - 1111:8888
     container_name: jupyter_notebook_bike
     command: "start-notebook.sh --NotebookApp.token="
+
+  # jupyter_spark:
+  #   build: 
+  #     context: .
+  #     dockerfile: ./docker/spark/Dockerfile.sparkgcs
+  #   environment:
+  #     - JUPYTER_TOKEN=codeop
+  #   ports:
+  #     - "2222:8888"
+  #   volumes:
+  #     - ./nbs/:/home/jovyan/work
+  #     - ./secrets/:/secrets/
+  #   container_name: jupyter_spark_bike
+

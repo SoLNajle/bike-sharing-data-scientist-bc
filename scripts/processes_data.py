@@ -2,8 +2,10 @@
 import pandas as pd
 import os
 
-from processes_data_monthly_data import create_month_files
+from processes_data_busiest_day_per_month import create_busiest_days_files
+from processes_data_monthly import create_month_files
 from processes_data_station_location import create_station_location_file
+from helpers import create_folder
 ascii_message = """
                                                                                 
 8 888888888o.          ,o888888o.     b.             8 8 8888888888             
@@ -23,25 +25,17 @@ check out jupyter --> http://localhost:1111/lab/tree/work/exploratory/stations.i
 """
 PROCCESED_FOLDER = "../data/bicing/processed"
 
+
 def show_done_message():
     print(ascii_message)
 
 
-
-def create_folder():
-    # create processed folder inside data if it does not exist
-    if not os.path.exists(PROCCESED_FOLDER):
-        os.makedirs(PROCCESED_FOLDER)
-        print(f"Folder '{PROCCESED_FOLDER}' created.")
-    else:
-        print(f"Folder '{PROCCESED_FOLDER}' already exists.")
-
-
 def main():
     start_time = pd.Timestamp.now()
-    create_folder()
+    create_folder(PROCCESED_FOLDER)
     create_station_location_file()
     create_month_files()
+    create_busiest_days_files()
     show_done_message()
     end_time = pd.Timestamp.now()
     print(f"Total time: {end_time - start_time}")
