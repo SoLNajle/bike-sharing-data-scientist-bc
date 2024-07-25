@@ -64,6 +64,22 @@ def create_new_columns(df: pd.DataFrame) -> pd.DataFrame:
         raise Exception(f"Error creating new columns: {e}")
 
 
+def add_is_docking_available_column(df: pd.DataFrame) -> pd.DataFrame:
+    df['docking_available'] = df['num_docks_available'].apply(
+        lambda x: False if x == 0 else True) & df['is_returning'].apply(lambda x: False if x == 0 else True)
+    return df
+
+
+def add_is_renting_columns(df: pd.DataFrame) -> pd.DataFrame:
+    df['bikes_available'] = df['num_bikes_available'].apply(
+        lambda x: False if x == 0 else True) & df['is_renting'].apply(lambda x: False if x == 0 else True)
+    df['bikes_available.mechanical'] = df['num_bikes_available_types.mechanical'].apply(
+        lambda x: False if x == 0 else True) & df['is_renting'].apply(lambda x: False if x == 0 else True)
+    df['bikes_available.ebike'] = df['num_bikes_available_types.ebike'].apply(lambda x: False if x == 0 else True) & df['is_renting'].apply(
+        lambda x: False if x == 0 else True)
+    return df
+
+
 def drop_date_columns(df: pd.DataFrame) -> pd.DataFrame:
     try:
         df.drop('last_reported', axis=1, inplace=True)
@@ -91,13 +107,8 @@ def filter_columns_to_keep(df: pd.DataFrame) -> pd.DataFrame:
     return df[columns_to_keep]
 
 
-
-
-
 def drop_na_rows(df: pd.DataFrame) -> pd.DataFrame:
     return df.dropna()
-
-
 
 
 def create_month_files() -> None:
@@ -120,7 +131,7 @@ def create_month_files() -> None:
         raw_rows = len(df)
         total_rows_raw += raw_rows
         print(f"Processing file {raw_file_name} with {raw_rows} rows.")
-        #Processing Starts
+        # Processing Starts
 
         df = filter_columns_to_keep(df)
         df = drop_na_rows(df)
@@ -129,6 +140,8 @@ def create_month_files() -> None:
         df = drop_date_columns(df)
         df = drop_duplicates(df)
         # count how many records
+        df = add_is_docking_available_column(df)
+        df = add_is_renting_columns(df)
         processed_rows = len(df)
         total_rows_prune += raw_rows - processed_rows
         df = assign_datatypes_month_df(df)
