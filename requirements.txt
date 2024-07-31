@@ -3,5 +3,10 @@ pandas
 numpy
 plotly.express
 pyarrow
-imageio
-kaleido
+seaborn
+tensorflow
+xgboost
+sickit-learn
+imblearn
+pickle
+keras_tuner
