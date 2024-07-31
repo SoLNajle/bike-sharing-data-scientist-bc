@@ -32,6 +32,8 @@ services:
       - 1111:8888
     container_name: jupyter_notebook_bike
     command: "start-notebook.sh --NotebookApp.token="
+    depends_on:
+      - data_preprocessing
 
   # jupyter_spark:
   #   build: 
