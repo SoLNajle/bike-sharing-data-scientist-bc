@@ -11,3 +11,7 @@ data/other
 
 #python cache
 __pycache__
+
+#ml models
+models
+tuner_dir
