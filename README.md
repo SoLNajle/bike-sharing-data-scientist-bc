@@ -37,3 +37,8 @@
 * validate [Datos Bicing](https://bicing.barcelona/es/datos-bicing##reference-1)
 
 ![Services](assets/bicing-3.png) ![Bikes](assets/bicing-2.png) ![Stations](assets/bicing-1.png) ![top 3 Stations](assets/bicing-0.png)
+
+# Project Presentation Slides
+
+* [Google Drive](https://docs.google.com/presentation/d/1QbRRdcx5YPAksbv6Nb34_CIaRWsGHNQl_4SPPq6lFDg/edit?usp=sharing
+)
