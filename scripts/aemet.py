@@ -16,7 +16,7 @@ def get_data(start_date, end_date, station):
 
     response = requests.request("GET", url, headers=headers)
     data = response.json()
-    
+    print(response)
     if data['estado'] == 200 and data['datos']:
         return fetch_data(data['datos'])
     return data
@@ -29,8 +29,8 @@ def fetch_data(url):
 
 
 def main():
-    start_date = '2023-05-06T00:00:00UTC'
-    end_date = '2024-03-31T00:00:00UTC'
+    start_date = '2023-01-01T00:00:00UTC'
+    end_date = '2023-05-31T00:00:00UTC'
     station = '0201D'
     aemet_df = pd.DataFrame()
     # call api for intervals of 30 days
