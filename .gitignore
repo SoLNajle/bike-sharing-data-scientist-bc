@@ -16,3 +16,6 @@ __pycache__
 models
 tuner_dir
 tuner_dir_year
+
+#spark driver
+gcs-connector-hadoop2-latest.jar
