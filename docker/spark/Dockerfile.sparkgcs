@@ -1,0 +1,11 @@
+FROM jupyter/pyspark-notebook:latest
+
+USER root
+
+WORKDIR /usr/local
+
+COPY ./gcs-connector-hadoop2-latest.jar /usr/local/spark/jars/
+
+USER $NB_UID
+
+WORKDIR /home/jovyan
