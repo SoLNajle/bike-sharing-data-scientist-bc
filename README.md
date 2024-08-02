@@ -16,6 +16,9 @@
 
 * **Machine Learning**
     * [01 - LSTM.ipynb](http://localhost:1111/lab/tree/work/ML/01-LSTM.ipynb) Long Short Term Memory Attempt at prediction Docker Availability (Binary Target)
+    * [Load Data.ipynb](http://localhost:1111/lab/tree/work/ML/load_data.ipynb) Template to load data for future models
+    * [information.ipynb](http://localhost:1111/lab/tree/work/ML/information.ipynb) Notes from the process and concepts to remember
+    
 3. `make stop` or `make kill` to stop the project
 ---
 
