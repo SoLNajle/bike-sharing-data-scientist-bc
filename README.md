@@ -9,9 +9,10 @@
 ![Done](assets/done.png)
 2. check jupyter notebooks in --> [here](http://localhost:1111/lab?)
 * **EDA**
-    * [Stations.ipynb](http://localhost:1111/lab/tree/work/exploratory/stations.ipynb) will have information about ... Stations
-    * [weather.ipynb](http://localhost:1111/lab/tree/work/exploratory/weather.ipynb) weather dataset preparation and a few plots
-    * [usage.ipynb](http://localhost:1111/lab/tree/work/exploratory/usage.ipynb) EDA related to bikes usage   
+    * [Stations.ipynb](http://localhost:1111/lab/tree/work/exploratory/01_stations.ipynb) will have information about ... Stations
+    * [Usage.ipynb](http://localhost:1111/lab/tree/work/exploratory/usage_02.ipynb) related to bikes usage  
+    * [Weather.ipynb](http://localhost:1111/lab/tree/work/exploratory/03_weather.ipynb) weather dataset preparation and a few plots
+ 
 
 * **Machine Learning**
     * [01 - LSTM.ipynb](http://localhost:1111/lab/tree/work/ML/01-LSTM.ipynb) Long Short Term Memory Attempt at prediction Docker Availability (Binary Target)
