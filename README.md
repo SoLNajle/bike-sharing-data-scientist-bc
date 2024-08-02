@@ -8,13 +8,36 @@
 ```* Wait for the Done message and the link!```
 ![Done](assets/done.png)
 2. check jupyter notebooks in --> [here](http://localhost:1111/lab?)
-* [Stations.ipynb](http://localhost:1111/lab/tree/work/exploratory/stations.ipynb) will have information about ... Stations
-* [WIP.ipynb](http://localhost:1111/lab/tree/work/exploratory/wip.ipynb) initial analysis, exploring, testing, and 42. Basically a gargabe collector 
-🗑️ 
+* **EDA**
+    * [Stations.ipynb](http://localhost:1111/lab/tree/work/exploratory/stations.ipynb) will have information about ... Stations
+    * [weather.ipynb](http://localhost:1111/lab/tree/work/exploratory/weather.ipynb) weather dataset preparation and a few plots
+    * [usage.ipynb](http://localhost:1111/lab/tree/work/exploratory/usage.ipynb) EDA related to bikes usage   
+
+* **Machine Learning**
+    * [01 - LSTM.ipynb](http://localhost:1111/lab/tree/work/ML/01-LSTM.ipynb) Long Short Term Memory Attempt at prediction Docker Availability (Binary Target)
 3. `make stop` or `make kill` to stop the project
+---
 
+### Docker Components
+![Docker](assets/docker.png)
 
-### Ideas 💡💡
+# Project Presentation Slides
+
+* [Google Drive](https://docs.google.com/presentation/d/1QbRRdcx5YPAksbv6Nb34_CIaRWsGHNQl_4SPPq6lFDg/edit?usp=sharing
+)
+
+# Branches
+
+* Master
+
+`Contains everything nice and tidy`
+* [Before-cleanup](https://github.com/SoLNajle/bike-sharing-data-scientist-bc/tree/before-cleanup)
+
+`has all the test, trials, and discarded ideas`
+
+--- 
+
+### Ideas Still WIP 💡💡
 #### Availabitity analysis 
 * weekday, weekend, holidays (festivo)
 * Weather impact (if i can find dataset) > 30°  more electric bikes, rain less usage (ofc)
@@ -38,7 +61,3 @@
 
 ![Services](assets/bicing-3.png) ![Bikes](assets/bicing-2.png) ![Stations](assets/bicing-1.png) ![top 3 Stations](assets/bicing-0.png)
 
-# Project Presentation Slides
-
-* [Google Drive](https://docs.google.com/presentation/d/1QbRRdcx5YPAksbv6Nb34_CIaRWsGHNQl_4SPPq6lFDg/edit?usp=sharing
-)
